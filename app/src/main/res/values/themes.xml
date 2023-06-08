@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Monager" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="LightTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/soft_pink</item>                       <!--Màu chính (ví dụ nền AppBar)-->
+        <item name="colorPrimaryDark">@color/soft_pink</item>               <!--Màu nền thanh trạng thái điện thoại-->
+        <item name="android:navigationBarColor">@color/soft_green</item>   <!--Màu nền điều hướng điện thoại-->
+        <item name="colorAccent">@color/dark_red</item><!--Màu nhấn mạnh (kiểm trong checkbox, gạch chân TextBox ...)-->
+        <item name="android:textColor">@color/dark_dark</item>
+        <item name="android:windowBackground">@drawable/day_gradient</item>      <!--Màu nền Activity-->
+        <item name="android:textColorPrimary">@color/dark_red</item>       <!--Màu chữ trong các control như Button ... -->
+        <item name="android:textColorSecondary">@color/dark_dark</item>   <!--Màu chữ ở trạng thái  ... -->
+
+    </style>
+    <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/dark_dark</item>                       <!--Màu chính (ví dụ nền AppBar)-->
+        <item name="colorPrimaryDark">@color/dark_dark</item>               <!--Màu nền thanh trạng thái điện thoại-->
+        <item name="android:navigationBarColor">@color/dark_red</item>   <!--Màu nền điều hướng điện thoại-->
+        <item name="colorAccent">@color/soft_green</item><!--Màu nhấn mạnh (kiểm trong checkbox, gạch chân TextBox ...)-->
+        <item name="android:textColor">@color/soft_pink</item>
+        <item name="android:windowBackground">@drawable/night_gradient</item>      <!--Màu nền Activity-->
+        <item name="android:textColorPrimary">@color/soft_green</item>       <!--Màu chữ trong các control như Button ... -->
+        <item name="android:textColorSecondary">@color/soft_green</item>   <!--Màu chữ ở trạng thái  ... -->
+
+    </style>
+</resources>
