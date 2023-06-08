@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Monager</string>
     <string name="slogan">Tiết kiệm và quản lý chi tiêu theo cách của bạn</string>
+    <string name="title_caidat">Cài đặt</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="title_bieudo">Biểu đồ</string>
+
 </resources>

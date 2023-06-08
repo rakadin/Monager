@@ -2,8 +2,9 @@ package com.example.monager.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.monager.R;
 
@@ -14,19 +15,20 @@ public class Start_up_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
-        setContentView(R.layout.activity_start_up);
-        //Đọc ID theme đã lưu, nếu chưa lưu thì dùng R.style.MyAppTheme
+
+        //        //Đọc ID theme đã lưu, nếu chưa lưu thì dùng R.style.MyAppTheme
         SharedPreferences locationpref = getApplicationContext()
                 .getSharedPreferences("MainActivity", MODE_PRIVATE);
         themeIdcurrent = locationpref.getInt("themeid",R.style.DarkTheme);
+        setTheme(R.style.DarkTheme);
         //Thiết lập theme cho Activity
-        setTheme(themeIdcurrent);
-
+        setContentView(R.layout.activity_start_up);
+        getSupportActionBar().hide();
         // next activity -> auto
         Utils.delay(50, () -> {
             Intent intent = new Intent();
             intent.setClass(this, HomePage_activity.class);
+            intent.putExtra("themeid",R.style.DarkTheme);
             startActivity(intent);
         });
     }

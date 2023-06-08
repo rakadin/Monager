@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/App_Sources_Things/Manage_Money_app/source_code/app/src/main/res/drawable-v24/night_gradient.xml" value="0.205" />
+        <entry key="..\:/App_Sources_Things/Manage_Money_app/source_code/app/src/main/res/drawable/bottom_nav_icon_tint.xml" value="0.198" />
         <entry key="..\:/App_Sources_Things/Manage_Money_app/source_code/app/src/main/res/drawable/ic_launcher_background.xml" value="0.205" />
+        <entry key="..\:/App_Sources_Things/Manage_Money_app/source_code/app/src/main/res/layout/activity_home_page.xml" value="0.264" />
         <entry key="..\:/App_Sources_Things/Manage_Money_app/source_code/app/src/main/res/layout/activity_start_up.xml" value="0.275" />
+        <entry key="..\:/App_Sources_Things/Manage_Money_app/source_code/app/src/main/res/menu/navigation.xml" value="0.275" />
       </map>
     </option>
   </component>
