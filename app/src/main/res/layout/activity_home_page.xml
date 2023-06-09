@@ -10,7 +10,7 @@
         android:id="@+id/frame_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navigation"
@@ -23,10 +23,10 @@
             app:menu="@menu/navigation" />
 
         <TextView
-            android:layout_gravity="center|top"
             android:id="@+id/nav_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
             android:fontFamily="sans-serif-light"
             android:text="@string/app_name"
             android:textColor="@color/red"

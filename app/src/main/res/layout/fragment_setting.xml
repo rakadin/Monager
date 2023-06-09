@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    tools:context=".activities.fragments.SettingFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:paddingLeft="15dp"
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/botron_background"
+            android:gravity=""
+            android:text="Thông tin người dùng"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:paddingLeft="15dp"
+            android:layout_margin="10dp"
+            android:id="@+id/mode"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/botron_background"
+            android:text="Chế độ tối"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info"
+            app:layout_constraintVertical_bias="0.0"></TextView>
+
+        <Switch
+            android:layout_marginRight="10sp"
+            android:id="@+id/switch1"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/mode"
+            app:layout_constraintEnd_toEndOf="@+id/mode"
+            app:layout_constraintHorizontal_bias="0.978"
+            app:layout_constraintStart_toStartOf="@+id/mode"
+            app:layout_constraintTop_toTopOf="@+id/mode"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/ads"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/botron_background"
+            android:paddingLeft="15dp"
+            android:text="Bật thông báo hàng ngày"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.105"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mode"
+            app:layout_constraintVertical_bias="0.0"></TextView>
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_marginRight="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ads"
+            app:layout_constraintEnd_toEndOf="@+id/ads"
+            app:layout_constraintHorizontal_bias="0.978"
+            app:layout_constraintStart_toStartOf="@+id/ads"
+            app:layout_constraintTop_toTopOf="@+id/ads"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/ads2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/botron_background"
+            android:paddingLeft="15dp"
+            android:text="Bật cảnh báo chi tiêu"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ads"
+            app:layout_constraintVertical_bias="0.0"></TextView>
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/ads2"
+            app:layout_constraintEnd_toEndOf="@+id/ads2"
+            app:layout_constraintHorizontal_bias="0.978"
+            app:layout_constraintStart_toStartOf="@+id/ads2"
+            app:layout_constraintTop_toTopOf="@+id/ads2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/ads3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/botron_background"
+            android:paddingLeft="15dp"
+            android:text="Bật bảo mật ứng dụng"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.157"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ads2"
+            app:layout_constraintVertical_bias="0.0"></TextView>
+
+        <Switch
+            android:id="@+id/switch4"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/ads3"
+            app:layout_constraintEnd_toEndOf="@+id/ads3"
+            app:layout_constraintHorizontal_bias="0.978"
+            app:layout_constraintStart_toStartOf="@+id/ads3"
+            app:layout_constraintTop_toTopOf="@+id/ads3"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
