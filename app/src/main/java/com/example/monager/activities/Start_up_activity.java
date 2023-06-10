@@ -16,11 +16,11 @@ public class Start_up_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //        //Đọc ID theme đã lưu, nếu chưa lưu thì dùng R.style.MyAppTheme
+        ////Đọc ID theme đã lưu, nếu chưa lưu thì dùng R.style.MyAppTheme
         SharedPreferences locationpref = getApplicationContext()
                 .getSharedPreferences("MainActivity", MODE_PRIVATE);
-        themeIdcurrent = locationpref.getInt("themeid",R.style.DarkTheme);
-        setTheme(R.style.DarkTheme);
+        themeIdcurrent = locationpref.getInt("themeid",R.style.LightTheme);
+        setTheme(themeIdcurrent);
         //Thiết lập theme cho Activity
         setContentView(R.layout.activity_start_up);
         getSupportActionBar().hide();
@@ -28,7 +28,6 @@ public class Start_up_activity extends AppCompatActivity {
         Utils.delay(50, () -> {
             Intent intent = new Intent();
             intent.setClass(this, HomePage_activity.class);
-            intent.putExtra("themeid",R.style.DarkTheme);
             startActivity(intent);
         });
     }

@@ -1,5 +1,9 @@
 package com.example.monager.activities.fragments;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +11,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Switch;
+import android.widget.Toast;
 
 import com.example.monager.R;
 
@@ -60,7 +66,60 @@ public class SettingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_setting, container, false);
+        Switch sw1,sw2,sw3,sw4;
+        // get ids
+        sw1 = view.findViewById(R.id.switch1);
+        sw2 = view.findViewById(R.id.switch2);
+        sw3 = view.findViewById(R.id.switch3);
+        sw2 = view.findViewById(R.id.switch4);
+
+        changeThemeSwitch(sw1,view);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_setting, container, false);
+        return view;
+    }
+    public void changeThemeSwitch(Switch sw1,View view)
+    {
+        int themeIdcurrent;
+        ////Đọc ID theme đã lưu, nếu chưa lưu thì dùng R.style.MyAppTheme
+        SharedPreferences locationpref = view.getContext()
+                .getSharedPreferences("MainActivity", MODE_PRIVATE);
+        themeIdcurrent = locationpref.getInt("themeid",R.style.LightTheme);
+        if(themeIdcurrent== R.style.DarkTheme){
+            sw1.toggle();
+        }
+        sw1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // turn switch
+                    if ( themeIdcurrent == R.style.DarkTheme) {
+                        //Lưu lại theme ID
+                        SharedPreferences locationpref = view.getContext()
+                                .getSharedPreferences("MainActivity", MODE_PRIVATE);
+                        SharedPreferences.Editor spedit = locationpref.edit();
+                        spedit.putInt("themeid", R.style.LightTheme);
+                        spedit.apply();
+                        // Khởi chạy lại Activity
+                        Intent intent = requireActivity().getIntent();
+                        requireActivity().finish();
+                        startActivity(intent);
+                    }
+                    if ( themeIdcurrent == R.style.LightTheme)
+                    {
+                        //Lưu lại theme ID
+                        SharedPreferences locationpref = view.getContext()
+                                .getSharedPreferences("MainActivity", MODE_PRIVATE);
+                        SharedPreferences.Editor spedit = locationpref.edit();
+                        spedit.putInt("themeid", R.style.DarkTheme);
+                        spedit.apply();
+                        // Khởi chạy lại Activity
+                        Intent intent = requireActivity().getIntent();
+                        requireActivity().finish();
+                        startActivity(intent);
+                    }
+                    }
+            });
+
     }
 }

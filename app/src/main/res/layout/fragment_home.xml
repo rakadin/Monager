@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    tools:context=".activities.fragments.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/toptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Hoạt động gần đây"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recent_acitivity"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:scrollbars="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.35"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toptext"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent="0.97" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/bottext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Giao dịch đã lưu"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.025"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_tran"
+            app:layout_constraintVertical_bias="0.035" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/saved_transaction"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottext"
+            app:layout_constraintVertical_bias="0.153"
+            app:layout_constraintWidth_percent="0.97" />
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="Thêm giao dịch mới"
+            android:id="@+id/new_tran"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rounded_border_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recent_acitivity"
+            app:layout_constraintVertical_bias="0.046"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <ImageView
+            android:id="@+id/circle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_gradient"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/new_tran"
+            app:layout_constraintEnd_toEndOf="@+id/new_tran"
+
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/new_tran"
+            app:layout_constraintTop_toTopOf="@+id/new_tran"
+            app:layout_constraintVertical_bias="0.437"
+            app:layout_constraintWidth_percent="0.109"
+            app:layout_constraintHeight_percent="0.06"/>
+
+        <ImageView
+            android:id="@+id/circle1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/add_icon"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/new_tran"
+            app:layout_constraintEnd_toEndOf="@+id/new_tran"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/new_tran"
+            app:layout_constraintTop_toTopOf="@+id/new_tran"
+            app:layout_constraintWidth_percent="0.097" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
