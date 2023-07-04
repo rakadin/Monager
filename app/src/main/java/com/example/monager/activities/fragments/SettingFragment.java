@@ -79,6 +79,7 @@ public class SettingFragment extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
+    // chức năng thay đổi theme sáng tối
     public void changeThemeSwitch(Switch sw1,View view)
     {
         int themeIdcurrent;

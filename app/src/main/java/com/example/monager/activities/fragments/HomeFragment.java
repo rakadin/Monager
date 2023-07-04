@@ -1,5 +1,6 @@
 package com.example.monager.activities.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 import com.example.monager.R;
+import com.example.monager.activities.utils;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,7 +31,9 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    public TextView butPer,butGr;
+    public ImageButton movingBut,eatBut,shopBut,studyBut,rentBut,loanBut,gameBut,medicalBut,travelBut,otherBut;
+    public com.example.monager.activities.utils utils = new utils();
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -61,7 +69,32 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        getIDs(view);
+        newPersonTrans(view.getContext());//run function
         // Inflate the layout for this fragment
         return view;
+    }
+    // get iDS func
+    public void getIDs(View view)
+    {
+        butPer = view.findViewById(R.id.new_tran);
+        butGr = view.findViewById(R.id.new_grouptran);
+        movingBut = view.findViewById(R.id.moving);
+        eatBut = view.findViewById(R.id.eat);
+        shopBut = view.findViewById(R.id.shopping);
+        studyBut = view.findViewById(R.id.study);
+        rentBut = view.findViewById(R.id.Hrent);
+        loanBut = view.findViewById(R.id.money);
+        gameBut = view.findViewById(R.id.game);
+        medicalBut = view.findViewById(R.id.medical);
+        travelBut = view.findViewById(R.id.travel);
+        otherBut = view.findViewById(R.id.other);
+    }
+    public void newPersonTrans(Context context)
+    {
+        butPer.setOnClickListener(view -> {
+            Long big = 100000000000L;
+            Toast.makeText(context,"click "+utils.formatMoney(big),Toast.LENGTH_LONG).show();
+        });
     }
 }
