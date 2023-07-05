@@ -33,7 +33,7 @@ public class utils {
     }
     public int getMonth()
     {
-        int month = calendar.get(Calendar.MONTH);
+        int month = calendar.get(Calendar.MONTH)+1;
         return month;
     }
     public int getDay()
@@ -41,13 +41,8 @@ public class utils {
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         return day;
     }
-    public int getTest()
-    {
-        int day = calendar.get(Calendar.HOUR_OF_DAY);
-        return day;
-    }
     // format num 1000 to 1,000 func
-    public String formatMoney(Long number)
+    public String formatMoney(int number)
     {
         NumberFormat nf = NumberFormat.getInstance(Locale.US);
         nf.setGroupingUsed(true);

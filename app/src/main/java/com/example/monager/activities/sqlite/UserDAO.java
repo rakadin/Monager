@@ -42,6 +42,91 @@ public class UserDAO {
         cursor.close();
         return userName;
     }
+    // get select from User
+    public String getUserSurname() {
+        Cursor cursor = db.rawQuery("SELECT UserSurname FROM User", null);
+        String userSurname = null;
+        cursor.moveToNext();
+        userSurname = cursor.getString(0);
+        cursor.close();
+        return userSurname;
+    }
+    public String getUserPass() {
+        Cursor cursor = db.rawQuery("SELECT UserPass FROM User", null);
+        String userPass = null;
+        cursor.moveToNext();
+        userPass = cursor.getString(0);
+        cursor.close();
+        return userPass;
+    }
+    public int getSalary() {
+        Cursor cursor = db.rawQuery("SELECT Salary FROM User", null);
+        int salary = 0;
+        cursor.moveToNext();
+        salary = cursor.getInt(0);
+        cursor.close();
+        return salary;
+    }
+    public int getTotalSave() {
+        Cursor cursor = db.rawQuery("SELECT TotalSave FROM User", null);
+        int tems = 0;
+        cursor.moveToNext();
+        tems = cursor.getInt(0);
+        cursor.close();
+        return tems;
+    }
+    public int getMSpendingLevel() {
+        Cursor cursor = db.rawQuery("SELECT MSpendingLevel FROM User", null);
+        int tems = 0;
+        cursor.moveToNext();
+        tems = cursor.getInt(0);
+        cursor.close();
+        return tems;
+    }
+    public int getYourLoan() {
+        Cursor cursor = db.rawQuery("SELECT YourLoan FROM User", null);
+        int tems = 0;
+        cursor.moveToNext();
+        tems = cursor.getInt(0);
+        cursor.close();
+        return tems;
+    }
+    public int getSaltime() {
+        Cursor cursor = db.rawQuery("SELECT SalTime FROM User", null);
+        int tems = 0;
+        cursor.moveToNext();
+        tems = cursor.getInt(0);
+        cursor.close();
+        return tems;
+    }
+    public void updateUserName(String string)
+    {
+        db.execSQL("UPDATE User SET UserName = ?", new String[]{string});
+    }
+    public void updateUserSurname(String string)
+    {
+        db.execSQL("UPDATE User SET UserSurname = ?", new String[]{string});
+    }
+    public void updateUserPass(String string)
+    {
+        db.execSQL("UPDATE User SET UserPass = ?", new String[]{string});
+    }
+    public void updateSalary(int number)
+    {
+        db.execSQL("UPDATE User SET Salary = ? ", new String[]{String.valueOf(number)});
+    }
+    public void updateTotalSave(int number)
+    {
+        db.execSQL("UPDATE User SET TotalSave = TotalSave + ? ", new String[]{String.valueOf(number)});
+    }
+    public void updateMSpendingLevel(int number)
+    {
+        db.execSQL("UPDATE User SET MSpendingLevel = ? ", new String[]{String.valueOf(number)});
+    }
+    public void updateSalTime(int number)
+    {
+        db.execSQL("UPDATE User SET SalTime = ? ", new String[]{String.valueOf(number)});
+    }
 //    /*
 //set things by id
 //*/

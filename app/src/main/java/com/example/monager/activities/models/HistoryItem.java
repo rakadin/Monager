@@ -1,22 +1,10 @@
 package com.example.monager.activities.models;
 
-public class History {
-    private String HistoryName;
+public class HistoryItem {
     private String Type;
     private int Value;
     private String HistoryDate;
     private String Note;
-    private int Yid;
-    private int Mid;
-    private int Did;
-
-    public String getHistoryName() {
-        return HistoryName;
-    }
-
-    public void setHistoryName(String historyName) {
-        HistoryName = historyName;
-    }
 
     public String getType() {
         return Type;
@@ -48,29 +36,5 @@ public class History {
 
     public void setNote(String note) {
         Note = note;
-    }
-
-    public int getYid() {
-        return Yid;
-    }
-
-    public void setYid(int yid) {
-        Yid = yid;
-    }
-
-    public int getMid() {
-        return Mid;
-    }
-
-    public void setMid(int mid) {
-        Mid = mid;
-    }
-
-    public int getDid() {
-        return Did;
-    }
-
-    public void setDid(int did) {
-        Did = did;
     }
 }

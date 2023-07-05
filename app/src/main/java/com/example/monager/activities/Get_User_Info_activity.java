@@ -92,6 +92,12 @@ public class Get_User_Info_activity extends AppCompatActivity {
                         controlButFunc();
                     }
                 });
+                b.setNegativeButton("Sửa tên", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
                 b.create().show();// show dialog
             }
         }
@@ -111,18 +117,71 @@ public class Get_User_Info_activity extends AppCompatActivity {
                 }
                 else
                 {
-                    DecimalFormat decimalFormat = new DecimalFormat("#,###");
-                    String formattedSal = decimalFormat.format(salaryInt);
+                    if(salaryInt ==0)
+                    {
+                        Toast.makeText(context,"Số lương/trợ cấp không hợp lý!",Toast.LENGTH_LONG).show();
+                    }
+                    else
+                    {
+                        DecimalFormat decimalFormat = new DecimalFormat("#,###");
+                        String formattedSal = decimalFormat.format(salaryInt);
+                        // su kien alert dialog
+                        AlertDialog.Builder b = new AlertDialog.Builder(context,R.style.CustomAlertDialogStyle);
+                        b.setTitle("Chấp nhận thêm thông tin");
+                        b.setIcon(R.drawable.faq_icon);
+                        b.setMessage("Vậy mức lương/trợ cấp của bạn là: "+formattedSal+" VND và bạn nhận nó vào ngày "+salTimeInt+" hàng tháng đúng chứ ?");
+                        b.setPositiveButton("Đúng rồi", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                user.setSalary(salaryInt);
+                                user.setSalTime(salTimeInt);
+                                count++;
+                                controlButFunc();
+                            }
+                        });
+                        b.setNegativeButton("Sửa lại", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        });
+                        b.create().show();// show dialog
+                    }
+
+                }
+            }
+        }
+        if(count == 2) // verify TotalSave and spending level
+        {
+            String totalString = TotalSave.getText().toString().trim();
+            String spendString = Spend.getText().toString().trim();
+            if(totalString.equals("")||spendString.equals(""))
+            {
+                Toast.makeText(context,"Hãy nhập đủ thông tin!",Toast.LENGTH_LONG).show();
+            }
+            if(totalString.equals("") == false && spendString.equals("")== false)
+            {
+                int totalInt = Integer.parseInt(totalString);
+                int spendInt = Integer.parseInt(spendString);
+                DecimalFormat decimalFormat = new DecimalFormat("#,###");
+                String formattedTotal = decimalFormat.format(totalInt);
+                String formattedSpend = decimalFormat.format(spendInt);
+                if(spendInt ==0)
+                {
+                    Toast.makeText(context,"Hạn mức bạn muốn không hợp lý!",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
                     // su kien alert dialog
                     AlertDialog.Builder b = new AlertDialog.Builder(context,R.style.CustomAlertDialogStyle);
                     b.setTitle("Chấp nhận thêm thông tin");
                     b.setIcon(R.drawable.faq_icon);
-                    b.setMessage("Vậy mức lương/trợ cấp của bạn là: "+formattedSal+" VND và bạn nhận nó vào ngày "+salTimeInt+" hàng tháng đúng chứ ?");
+                    b.setMessage("Vậy hiện tại bạn đã tích được: "+formattedTotal+" VNĐ và bạn muốn đặt hạn mức chi tiêu cho một tháng là "+formattedSpend+" VNĐ đúng chứ ?");
                     b.setPositiveButton("Đúng rồi", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            user.setSalary(salaryInt);
-                            user.setSalTime(salTimeInt);
+                            user.setTotalSave(totalInt);
+                            user.setMSpendingLevel(spendInt);
                             count++;
                             controlButFunc();
                         }
@@ -135,44 +194,7 @@ public class Get_User_Info_activity extends AppCompatActivity {
                     });
                     b.create().show();// show dialog
                 }
-            }
-        }
-        if(count == 2) // verify TotalSave and spending level
-        {
-            String totalString = TotalSave.getText().toString().trim();
-            String spendString = Spend.getText().toString().trim();
-            if(totalString.equals("")||spendString.equals(""))
-            {
-                Toast.makeText(context,"Ngày trong tháng không hợp lệ!",Toast.LENGTH_LONG).show();
-            }
-            if(totalString.equals("") == false && spendString.equals("")== false)
-            {
-                int totalInt = Integer.parseInt(totalString);
-                int spendInt = Integer.parseInt(spendString);
-                DecimalFormat decimalFormat = new DecimalFormat("#,###");
-                String formattedTotal = decimalFormat.format(totalInt);
-                String formattedSpend = decimalFormat.format(spendInt);
-                // su kien alert dialog
-                AlertDialog.Builder b = new AlertDialog.Builder(context,R.style.CustomAlertDialogStyle);
-                b.setTitle("Chấp nhận thêm thông tin");
-                b.setIcon(R.drawable.faq_icon);
-                b.setMessage("Vậy hiện tại bạn đã tích được: "+formattedTotal+" VNĐ và bạn muốn đặt hạn mức chi tiêu cho một tháng là "+formattedSpend+" VNĐ đúng chứ ?");
-                b.setPositiveButton("Đúng rồi", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        user.setTotalSave(totalInt);
-                        user.setMSpendingLevel(spendInt);
-                        count++;
-                        controlButFunc();
-                    }
-                });
-                b.setNegativeButton("Sửa lại", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                });
-                b.create().show();// show dialog
+
             }
         }
     }

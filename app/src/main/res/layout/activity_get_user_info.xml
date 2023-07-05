@@ -13,7 +13,7 @@
         android:fontFamily="casual"
         android:gravity="center"
         android:text="Cùng làm quen nào!"
-        android:textSize="28sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:text="Họ đệm của bạn là ?"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,17 +61,18 @@
         android:background="@drawable/rounded_border_button"
         android:gravity="center"
         android:paddingLeft="10dp"
+        android:textSize="14sp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"
         android:paddingBottom="5dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent="0.9" />
+        app:layout_constraintWidth_percent="0.8" />
 
     <TextView
 
@@ -82,7 +83,7 @@
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:text="Mức lương/trợ cấp hàng tháng?"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,6 +100,7 @@
         android:background="@drawable/rounded_border_button"
         android:gravity="center"
         android:inputType="number"
+        android:textSize="16sp"
         android:maxLines="1"
         android:maxLength="10"
         android:paddingLeft="10dp"
@@ -108,11 +110,11 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSalary"
         app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent="0.9" />
+        app:layout_constraintWidth_percent="0.8" />
 
     <TextView
 
@@ -123,7 +125,7 @@
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:text="Còn tên của bạn thì sao ?"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -133,6 +135,7 @@
         app:layout_constraintVertical_bias="0.0"></TextView>
 
     <com.google.android.material.textfield.TextInputEditText
+        android:textSize="16sp"
         android:id="@+id/name"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -146,11 +149,11 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent="0.9" />
+        app:layout_constraintWidth_percent="0.8" />
 
     <TextView
         android:id="@+id/txtSalTime"
@@ -160,7 +163,7 @@
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:text="Ngày nhận lương/trợ cấp hàng tháng ?"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -170,6 +173,7 @@
         app:layout_constraintVertical_bias="0.0"></TextView>
 
     <com.google.android.material.textfield.TextInputEditText
+        android:textSize="16sp"
         android:id="@+id/SalTime"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -187,11 +191,11 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSalTime"
         app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent="0.9" />
+        app:layout_constraintWidth_percent="0.8" />
 
     <TextView
         android:id="@+id/txtTotalSave"
@@ -201,7 +205,7 @@
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:text="Bạn đã tiết kiệm được bao nhiêu?"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -210,6 +214,7 @@
         app:layout_constraintVertical_bias="0.0"></TextView>
 
     <com.google.android.material.textfield.TextInputEditText
+        android:textSize="16sp"
         android:id="@+id/TotalSave"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -227,11 +232,11 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTotalSave"
         app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent="0.9" />
+        app:layout_constraintWidth_percent="0.8" />
 
     <TextView
         android:id="@+id/txtSpend"
@@ -241,7 +246,7 @@
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:text="Hạn mức chi tiêu 1 tháng đề ra?"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -251,13 +256,14 @@
         app:layout_constraintVertical_bias="0.0"></TextView>
 
     <com.google.android.material.textfield.TextInputEditText
+        android:textSize="16sp"
         android:id="@+id/Spend"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/rounded_border_button"
         android:gravity="center"
-        android:hint="Nhập hạn mức chi tiêu hàng tháng"
+        android:hint="Nhập hạn mức chi tiêu"
         android:inputType="number"
         android:maxLines="1"
         android:maxLength="10"
@@ -268,11 +274,11 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSpend"
         app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent="0.9" />
+        app:layout_constraintWidth_percent="0.8" />
 
     <Button
         android:id="@+id/nextBut"
@@ -283,7 +289,7 @@
         android:text="Tiếp theo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.065"
+        app:layout_constraintHeight_percent="0.055"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gifImageView"
