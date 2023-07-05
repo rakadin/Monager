@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.monager.R;
+import com.example.monager.activities.sqlite.UserDAO;
 import com.example.monager.activities.utils;
 
 
@@ -27,11 +28,11 @@ public class HomeFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    private UserDAO userDAO;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    public TextView butPer,butGr;
+    public TextView butPer,butGr,nameText;
     public ImageButton movingBut,eatBut,shopBut,studyBut,rentBut,loanBut,gameBut,medicalBut,travelBut,otherBut;
     public com.example.monager.activities.utils utils = new utils();
     public HomeFragment() {
@@ -69,7 +70,9 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        userDAO = new UserDAO(view.getContext());
         getIDs(view);
+        nameText.setText("Xin chào,"+userDAO.getUserName()+"🤘");
         newPersonTrans(view.getContext());//run function
         // Inflate the layout for this fragment
         return view;
@@ -89,6 +92,7 @@ public class HomeFragment extends Fragment {
         medicalBut = view.findViewById(R.id.medical);
         travelBut = view.findViewById(R.id.travel);
         otherBut = view.findViewById(R.id.other);
+        nameText = view.findViewById(R.id.nameText);
     }
     public void newPersonTrans(Context context)
     {

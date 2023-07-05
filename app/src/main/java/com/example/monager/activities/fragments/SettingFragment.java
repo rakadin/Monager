@@ -72,8 +72,7 @@ public class SettingFragment extends Fragment {
         sw1 = view.findViewById(R.id.switch1);
         sw2 = view.findViewById(R.id.switch2);
         sw3 = view.findViewById(R.id.switch3);
-        sw2 = view.findViewById(R.id.switch4);
-
+        sw4 = view.findViewById(R.id.switch4);
         changeThemeSwitch(sw1,view);
 
         // Inflate the layout for this fragment
@@ -85,7 +84,7 @@ public class SettingFragment extends Fragment {
         int themeIdcurrent;
         ////Đọc ID theme đã lưu, nếu chưa lưu thì dùng R.style.MyAppTheme
         SharedPreferences locationpref = view.getContext()
-                .getSharedPreferences("MainActivity", MODE_PRIVATE);
+                .getSharedPreferences("GetTheme", MODE_PRIVATE);
         themeIdcurrent = locationpref.getInt("themeid",R.style.LightTheme);
         if(themeIdcurrent== R.style.DarkTheme){
             sw1.toggle();
@@ -94,10 +93,11 @@ public class SettingFragment extends Fragment {
                 @Override
                 public void onClick(View view) {
                     // turn switch
+                    Toast.makeText(view.getContext(),"chuyển sw",Toast.LENGTH_SHORT).show();
                     if ( themeIdcurrent == R.style.DarkTheme) {
                         //Lưu lại theme ID
                         SharedPreferences locationpref = view.getContext()
-                                .getSharedPreferences("MainActivity", MODE_PRIVATE);
+                                .getSharedPreferences("GetTheme", MODE_PRIVATE);
                         SharedPreferences.Editor spedit = locationpref.edit();
                         spedit.putInt("themeid", R.style.LightTheme);
                         spedit.apply();
@@ -110,7 +110,7 @@ public class SettingFragment extends Fragment {
                     {
                         //Lưu lại theme ID
                         SharedPreferences locationpref = view.getContext()
-                                .getSharedPreferences("MainActivity", MODE_PRIVATE);
+                                .getSharedPreferences("GetTheme", MODE_PRIVATE);
                         SharedPreferences.Editor spedit = locationpref.edit();
                         spedit.putInt("themeid", R.style.DarkTheme);
                         spedit.apply();

@@ -33,6 +33,15 @@ public class UserDAO {
         values.put("SalTime", user.getSalTime());
         return  db.insert("User",null, values);// gửi value kia vào database
     }
+    // get select from User
+    public String getUserName() {
+        Cursor cursor = db.rawQuery("SELECT UserName FROM User", null);
+        String userName = null;
+        cursor.moveToNext();
+        userName = cursor.getString(0);
+        cursor.close();
+        return userName;
+    }
 //    /*
 //set things by id
 //*/
