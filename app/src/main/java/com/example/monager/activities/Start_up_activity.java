@@ -40,7 +40,7 @@ public class Start_up_activity extends AppCompatActivity {
         getSupportActionBar().hide();
         // next activity -> auto
         Utils.delay(50, () -> {
-            if (firsttime != 0)// là người dùng mới
+            if (firsttime == 0)// là người dùng mới
             {
                 // su kien alert dialog
                 AlertDialog.Builder b = new AlertDialog.Builder(Start_up_activity.this,R.style.CustomAlertDialogStyle);
@@ -60,13 +60,6 @@ public class Start_up_activity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setClass(this, HomePage_activity.class);
                 startActivity(intent);
-//                Toast.makeText(Start_up_activity.this,"firsttime",Toast.LENGTH_LONG).show();
-//                // gửi thông tin lên là k còn là người dùng mới
-//                SharedPreferences locationpref3 = getApplicationContext()
-//                        .getSharedPreferences("MainActivity", MODE_PRIVATE);
-//                SharedPreferences.Editor spedit = locationpref3.edit();
-//                spedit.putInt("firsttime", 5);
-//                spedit.apply();
                 //
             }
         });

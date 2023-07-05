@@ -16,18 +16,20 @@ import com.example.monager.R;
 import com.example.monager.activities.fragments.ChartFragment;
 import com.example.monager.activities.fragments.HomeFragment;
 import com.example.monager.activities.fragments.SettingFragment;
+import com.example.monager.activities.sqlite.UserDAO;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomePage_activity extends AppCompatActivity {
     private ActionBar toolbar;
     private TextView navname;
+    private UserDAO userDAO;
     int themeIdcurrent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ////Đọc ID theme đã lưu, nếu chưa lưu thì dùng R.style.MyAppTheme
         SharedPreferences locationpref = getApplicationContext()
-                .getSharedPreferences("MainActivity", MODE_PRIVATE);
+                .getSharedPreferences("GetTheme", MODE_PRIVATE);
         themeIdcurrent = locationpref.getInt("themeid",R.style.LightTheme);
         setTheme(themeIdcurrent);
         setContentView(R.layout.activity_home_page);
@@ -37,7 +39,7 @@ public class HomePage_activity extends AppCompatActivity {
         getSupportActionBar().hide();
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
+        userDAO = new UserDAO(HomePage_activity.this);
         // load first fragment
         changeNav("Trang chủ");
         Fragment fragment;

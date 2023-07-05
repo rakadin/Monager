@@ -13,6 +13,24 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:gravity="center"
+            android:autoSizeTextType="uniform"
+            android:text="xin chào đức"
+            android:id="@+id/nameText"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.001" />
+
+        <TextView
             android:id="@+id/toptext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,7 +46,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recent_acitivity"
             android:layout_marginLeft="6dp"
