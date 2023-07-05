@@ -6,12 +6,6 @@ public class Year {
     private int YmoneyInTotal;
     private int YmoneyOutTotal;
 
-    public Year(int yid, String yname, int ymoneyInTotal, int ymoneyOutTotal) {
-        Yid = yid;
-        Yname = yname;
-        YmoneyInTotal = ymoneyInTotal;
-        YmoneyOutTotal = ymoneyOutTotal;
-    }
 
     public int getYid() {
         return Yid;

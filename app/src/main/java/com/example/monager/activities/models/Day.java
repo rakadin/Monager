@@ -18,24 +18,7 @@ public class Day {
     private int D_otherService;
     private int Yid;
 
-    public Day(int did, int mid, String dname, int dmoneyIn, int dmoneyOut, int d_moving, int d_eat_drink, int d_shopping, int d_study, int d_Hrent, int d_loan, int d_game, int d_medical, int d_bigTravel, int d_otherService, int yid) {
-        Did = did;
-        Mid = mid;
-        Dname = dname;
-        DmoneyIn = dmoneyIn;
-        DmoneyOut = dmoneyOut;
-        D_moving = d_moving;
-        D_eat_drink = d_eat_drink;
-        D_shopping = d_shopping;
-        D_study = d_study;
-        D_Hrent = d_Hrent;
-        D_loan = d_loan;
-        D_game = d_game;
-        D_medical = d_medical;
-        D_bigTravel = d_bigTravel;
-        D_otherService = d_otherService;
-        Yid = yid;
-    }
+
 
     public int getDid() {
         return Did;

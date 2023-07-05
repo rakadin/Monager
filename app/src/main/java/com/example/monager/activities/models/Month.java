@@ -17,23 +17,6 @@ public class Month {
     private int M_otherService;
     private int Yid;
 
-    public Month(int mid, String mname, int mmoneyIn, int mmoneyOut, int m_moving, int m_eat_drink, int m_shopping, int m_study, int m_Hrent, int m_loan, int m_game, int m_medical, int m_bigTravel, int m_otherService, int yid) {
-        Mid = mid;
-        Mname = mname;
-        MmoneyIn = mmoneyIn;
-        MmoneyOut = mmoneyOut;
-        M_moving = m_moving;
-        M_eat_drink = m_eat_drink;
-        M_shopping = m_shopping;
-        M_study = m_study;
-        M_Hrent = m_Hrent;
-        M_loan = m_loan;
-        M_game = m_game;
-        M_medical = m_medical;
-        M_bigTravel = m_bigTravel;
-        M_otherService = m_otherService;
-        Yid = yid;
-    }
 
     public int getMid() {
         return Mid;

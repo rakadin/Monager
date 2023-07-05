@@ -27,7 +27,7 @@ public class Start_up_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ////Đọc ID theme đã lưu, nếu chưa lưu thì dùng R.style.MyAppTheme
         SharedPreferences locationpref = getApplicationContext()
-                .getSharedPreferences("MainActivity", MODE_PRIVATE);
+                .getSharedPreferences("GetTheme", MODE_PRIVATE);
         themeIdcurrent = locationpref.getInt("themeid", R.style.LightTheme);
         setTheme(themeIdcurrent);
         // xem có phải lần đầu người dùng sử dụng ứng dụng không
