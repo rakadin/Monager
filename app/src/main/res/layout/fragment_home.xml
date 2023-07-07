@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="50dp"
+    android:layout_marginTop="40dp"
     tools:context=".activities.fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -21,7 +21,7 @@
             android:id="@+id/nameText"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintWidth_percent="0.35"
             app:layout_constraintHeight_percent="0.035"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
@@ -51,7 +51,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
-        <androidx.recyclerview.widget.RecyclerView
+        <ListView
             android:id="@+id/recent_acitivity"
             android:layout_marginLeft="6dp"
             android:layout_width="0dp"

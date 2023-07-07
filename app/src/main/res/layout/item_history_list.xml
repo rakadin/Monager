@@ -1,0 +1,131 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/rounded_border_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rounded_border_history_logo"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/eat_icon"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent="0.17" />
+
+        <TextView
+            android:id="@+id/typetext"
+            android:layout_marginLeft="6dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Ăn uống"
+            android:autoSizeTextType="uniform"
+            android:padding="2dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent="0.3" />
+
+
+        <TextView
+            android:layout_marginLeft="6dp"
+            android:id="@+id/datetext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif-medium"
+            android:padding="2dp"
+            android:text="08/08/2023"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.45"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toBottomOf="@+id/typetext"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_percent="0.32" />
+
+        <TextView
+            android:id="@+id/valuetext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="6dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="right"
+            android:padding="2dp"
+            android:text="+1.000.000.000 VNĐ"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toEndOf="@+id/typetext"
+            app:layout_constraintTop_toTopOf="@+id/typetext"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent="0.4" />
+
+        <ImageView
+            android:id="@+id/note"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/note"
+            android:layout_marginRight="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.45"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/notetext"
+            app:layout_constraintTop_toTopOf="@+id/notetext"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_percent="0.07" />
+
+        <TextView
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:id="@+id/notetext"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="6dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="right"
+            android:padding="2dp"
+            android:paddingLeft="4dp"
+            android:text="note nè"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.45"
+            app:layout_constraintHorizontal_bias="0.276"
+            app:layout_constraintStart_toEndOf="@+id/typetext"
+            app:layout_constraintTop_toBottomOf="@+id/valuetext"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_percent="0.4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

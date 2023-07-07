@@ -92,8 +92,6 @@ public class SettingFragment extends Fragment {
         sw1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    // turn switch
-                    Toast.makeText(view.getContext(),"chuyển sw",Toast.LENGTH_SHORT).show();
                     if ( themeIdcurrent == R.style.DarkTheme) {
                         //Lưu lại theme ID
                         SharedPreferences locationpref = view.getContext()
