@@ -91,6 +91,14 @@ public class UserDAO {
         cursor.close();
         return tems;
     }
+    public int getBonusMoney() {
+        Cursor cursor = db.rawQuery("SELECT BonusMoney FROM User", null);
+        int tems = 0;
+        cursor.moveToNext();
+        tems = cursor.getInt(0);
+        cursor.close();
+        return tems;
+    }
     public int getSaltime() {
         Cursor cursor = db.rawQuery("SELECT SalTime FROM User", null);
         int tems = 0;
@@ -119,9 +127,25 @@ public class UserDAO {
     {
         db.execSQL("UPDATE User SET TotalSave = TotalSave + ? ", new String[]{String.valueOf(number)});
     }
+    public void updateTotalSaveDecrease(int number)
+    {
+        db.execSQL("UPDATE User SET TotalSave = TotalSave - ? ", new String[]{String.valueOf(number)});
+    }
     public void updateMSpendingLevel(int number)
     {
         db.execSQL("UPDATE User SET MSpendingLevel = ? ", new String[]{String.valueOf(number)});
+    }
+    public void updateBonusMoney(int number)
+    {
+        db.execSQL("UPDATE User SET BonusMoney = BonusMoney + ? ", new String[]{String.valueOf(number)});
+    }
+    public void updateYourLoan(int number)
+    {
+        db.execSQL("UPDATE User SET YourLoan = YourLoan - ? ", new String[]{String.valueOf(number)});
+    }
+    public void updateYourLoanDecrease(int number)
+    {
+        db.execSQL("UPDATE User SET YourLoan = YourLoan + ? ", new String[]{String.valueOf(number)});
     }
     public void updateSalTime(int number)
     {

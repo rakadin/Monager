@@ -167,7 +167,10 @@ public class MonthDAO {
     {
         db.execSQL("UPDATE Month SET M_eat_drink = M_eat_drink + ? WHERE Mname = ? AND Yid = ?", new String[]{String.valueOf(money),monthS,String.valueOf(Yid)});
     }
-
+    public void updateM_shopping(int money ,String monthS, int Yid)
+    {
+        db.execSQL("UPDATE Month SET M_shopping = M_shopping + ? WHERE Mname = ? AND Yid = ?", new String[]{String.valueOf(money),monthS,String.valueOf(Yid)});
+    }
     public void updateM_study(int money ,String monthS, int Yid)
     {
         db.execSQL("UPDATE Month SET M_study = M_study + ? WHERE Mname = ? AND Yid = ?", new String[]{String.valueOf(money),monthS,String.valueOf(Yid)});

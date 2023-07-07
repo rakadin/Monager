@@ -4,7 +4,9 @@ import android.os.Handler;
 
 import java.math.BigInteger;
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class utils {
@@ -41,8 +43,18 @@ public class utils {
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         return day;
     }
+    public String getDate()
+    {
+        Date currentDate = new Date();
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String formattedDate = dateFormat.format(currentDate);
+
+        return formattedDate;
+    }
+
     // format num 1000 to 1,000 func
-    public String formatMoney(int number)
+    public static String formatMoney(int number)
     {
         NumberFormat nf = NumberFormat.getInstance(Locale.US);
         nf.setGroupingUsed(true);
